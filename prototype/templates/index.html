@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Predict Insurance Bill</title>
+  <!-- <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'> -->
+  <!-- <link type="text/css" rel="stylesheet" href="/static/./style.css"> -->
+  <!-- <link type="text/css" rel="stylesheet" href={{url_for('static', filename='./style.css')}}> -->
+</head>
+
+<body>
+  <div class="form">
+    <h1>Predict Insurance Bill</h1>
+    <form action="/predict" method="POST">
+      <input type="text" name="age" placeholder="23" required="required" /> Age<br />
+      <input type="text" name="sex" placeholder="male" required="required" /> Gender (male/female)<br />
+      <input type="text" name="bmi" placeholder="3.4" required="required" /> Body Mass Index<br />
+      <input type="text" name="children" placeholder="2" required="required" /> # Children<br />
+      <input type="text" name="smoker" placeholder="no" required="required" /> Smoker? (no/yes)<br />
+      <input type="text" name="region" placeholder="northeast" required="required" /> Region(northeast/northwest/southeast/southwest)<br />
+      <input type="submit" value="Predict">
+    </form>
+<!-- 
+    <script>
+    $(document).ready(function() {
+      $('#Predict').click(function() {
+         var ddl = $('[name="list"]').val();
+           $("#3").text(ddl);
+       });
+   });
+  </script> -->
+   
+
+    {% if pred %}
+    Insurance premium is predicted to be: ${{ pred }}
+    {% endif %}
+
+</body>
+</html>

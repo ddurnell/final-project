@@ -1,0 +1,31 @@
+(PythonData) PS C:\Users\Dave\DU-DEN-GITLAB\FinalProject\digits> python msinst_cnn.py
+x_train shape: (60000, 28, 28, 1)
+60000 train samples
+10000 test samples
+2020-05-12 10:17:51.417552: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX
+Train on 60000 samples, validate on 10000 samples
+Epoch 1/12
+60000/60000 [==============================] - 220s 4ms/sample - loss: 2.2862 - accuracy: 0.1479 - val_loss: 2.2566 - val_accuracy: 0.3017
+Epoch 2/12
+60000/60000 [==============================] - 221s 4ms/sample - loss: 2.2390 - accuracy: 0.2492 - val_loss: 2.2002 - val_accuracy: 0.4860
+Epoch 3/12
+60000/60000 [==============================] - 222s 4ms/sample - loss: 2.1823 - accuracy: 0.3393 - val_loss: 2.1294 - val_accuracy: 0.5666
+Epoch 4/12
+60000/60000 [==============================] - 219s 4ms/sample - loss: 2.1069 - accuracy: 0.4097 - val_loss: 2.0342 - val_accuracy: 0.6179
+Epoch 5/12
+60000/60000 [==============================] - 212s 4ms/sample - loss: 2.0061 - accuracy: 0.4726 - val_loss: 1.9058 - val_accuracy: 0.6711
+Epoch 6/12
+60000/60000 [==============================] - 219s 4ms/sample - loss: 1.8778 - accuracy: 0.5240 - val_loss: 1.7435 - val_accuracy: 0.7151
+Epoch 7/12
+60000/60000 [==============================] - 212s 4ms/sample - loss: 1.7244 - accuracy: 0.5657 - val_loss: 1.5553 - val_accuracy: 0.7477
+Epoch 8/12
+60000/60000 [==============================] - 209s 3ms/sample - loss: 1.5627 - accuracy: 0.5996 - val_loss: 1.3596 - val_accuracy: 0.7736
+Epoch 9/12
+60000/60000 [==============================] - 218s 4ms/sample - loss: 1.4066 - accuracy: 0.6279 - val_loss: 1.1790 - val_accuracy: 0.7916
+Epoch 10/12
+60000/60000 [==============================] - 209s 3ms/sample - loss: 1.2665 - accuracy: 0.6545 - val_loss: 0.9072 - val_accuracy: 0.8178
+Epoch 12/12
+60000/60000 [==============================] - 221s 4ms/sample - loss: 1.0651 - accuracy: 0.6927 - val_loss: 0.8156 - val_accuracy: 0.8273
+Test loss: 0.8155952778816223
+Test accuracy: 0.8273
+(PythonData) PS C:\Users\Dave\DU-DEN-GITLAB\FinalProject\digits> Train on 60000 samples, validate on 10000 samplesTrain on 60000 samples, validate on 10000 samplesTrain on 60000 samples, validate on 10000 samplesTrain on 60000 samples, validate on 10000 samplesTrain on 60000 samples, validate on 10000 samplesTrain on 60000 samples, validate on 10000 samplesTrain on 60000 samples, validate on 10000 samples

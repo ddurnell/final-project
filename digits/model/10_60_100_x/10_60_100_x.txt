@@ -1,0 +1,860 @@
+File "C:\Anaconda3\envs\PythonData\lib\site-packages\tensorflow_core\python\framework\ops.py", line 
+3584, in _as_graph_element_locked
+    raise ValueError("Tensor %s is not an element of this graph." % obj)
+ValueError: Tensor Tensor("dense_1/Identity:0", shape=(None, 10), dtype=float32) is not an element of 
+this graph.
+127.0.0.1 - - [12/May/2020 10:15:30] "POST /predict/ HTTP/1.1" 500 -
+(PythonData) PS C:\Users\Dave\DU-DEN-GITLAB\FinalProject\digits> python app.py
+2020-05-12 10:16:23.546481: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX
+Loaded Model from disk
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Running on http://localhost:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [12/May/2020 10:16:27] "GET / HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000028A4D5DC320>
+[[1.2427650e-09 5.7254956e-06 9.6365396e-13 2.2952410e-12 1.0040282e-05
+  9.9996662e-01 9.0310884e-08 1.5078092e-21 1.7474527e-05 1.1661083e-08]]
+[5]
+127.0.0.1 - - [12/May/2020 10:16:30] "POST /predict/ HTTP/1.1" 200 -
+(PythonData) PS C:\Users\Dave\DU-DEN-GITLAB\FinalProject\digits> python msinst_cnn.py
+x_train shape: (60000, 28, 28, 1)
+60000 train samples
+10000 test samples
+2020-05-12 10:17:51.417552: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX
+Train on 60000 samples, validate on 10000 samples
+Epoch 1/12
+60000/60000 [==============================] - 220s 4ms/sample - loss: 2.2862 - accuracy: 0.1479 - val_loss: 2.2566 - val_accuracy: 0.3017
+Epoch 2/12
+60000/60000 [==============================] - 221s 4ms/sample - loss: 2.2390 - accuracy: 0.2492 - val_loss: 2.2002 - val_accuracy: 0.4860
+Epoch 3/12
+60000/60000 [==============================] - 222s 4ms/sample - loss: 2.1823 - accuracy: 0.3393 - val_loss: 2.1294 - val_accuracy: 0.5666
+Epoch 4/12
+60000/60000 [==============================] - 219s 4ms/sample - loss: 2.1069 - accuracy: 0.4097 - val_loss: 2.0342 - val_accuracy: 0.6179
+Epoch 5/12
+60000/60000 [==============================] - 212s 4ms/sample - loss: 2.0061 - accuracy: 0.4726 - val_loss: 1.9058 - val_accuracy: 0.6711
+Epoch 6/12
+60000/60000 [==============================] - 219s 4ms/sample - loss: 1.8778 - accuracy: 0.5240 - val_loss: 1.7435 - val_accuracy: 0.7151
+Epoch 7/12
+60000/60000 [==============================] - 212s 4ms/sample - loss: 1.7244 - accuracy: 0.5657 - val_loss: 1.5553 - val_accuracy: 0.7477
+Epoch 8/12
+60000/60000 [==============================] - 209s 3ms/sample - loss: 1.5627 - accuracy: 0.5996 - val_loss: 1.3596 - val_accuracy: 0.7736
+Epoch 9/12
+60000/60000 [==============================] - 218s 4ms/sample - loss: 1.4066 - accuracy: 0.6279 - val_loss: 1.1790 - val_accuracy: 0.7916
+Epoch 10/12
+60000/60000 [==============================] - 209s 3ms/sample - loss: 1.2665 - accuracy: 0.6545 - valEpoch 12/12
+60000/60000 [==============================] - 221s 4ms/sample - loss: 1.0651 - accuracy: 0.6927 - val_loss: 0.8156 - val_accuracy: 0.8273
+Test loss: 0.8155952778816223
+Test accuracy: 0.8273
+(PythonData) PS C:\Users\Dave\DU-DEN-GITLAB\FinalProject\digits> Train on 60000 samples, validate on 10000 samplesTrain on 60000 samples, validate on 10000 samplesTrain on 60000 samples, validate on 10000 samplesTrain on 60000 samples, validate on 10000 samplesTrain on 60000 samples, validate on 10000 samplesTrain on 60000 samples, validate on 10000 samplesTrain on 60000 samples, validate on 10000 samples
+Train : The term 'Train' is not recognized as the name of a cmdlet, function, script file, or 
+operable program. Check the spelling of the name, or if a path was included, verify that the path is  
+At line:1 char:1
++ Train on 60000 samples, validate on 10000 samplesTrain on 60000 sampl ...
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (Train:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+(PythonData) PS C:\Users\Dave\DU-DEN-GITLAB\FinalProject\digits> python app.py
+2020-05-12 11:11:27.719553: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX
+Loaded Model from disk
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://localhost:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [12/May/2020 11:11:32] "GET / HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0.0000000e+00 0.0000000e+00 0.0000000e+00 0.0000000e+00 4.2288650e-28
+  0.0000000e+00 1.0000000e+00 0.0000000e+00 2.8907458e-25 0.0000000e+00]]
+[6]
+127.0.0.1 - - [12/May/2020 11:11:46] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0.0000000e+00 1.0000000e+00 0.0000000e+00 0.0000000e+00 0.0000000e+00
+  0.0000000e+00 0.0000000e+00 0.0000000e+00 0.0000000e+00 1.7594619e-34]]
+[1]
+127.0.0.1 - - [12/May/2020 11:11:55] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0.0000000e+00 0.0000000e+00 3.9714611e-32 1.0000000e+00 0.0000000e+00
+  0.0000000e+00 0.0000000e+00 0.0000000e+00 0.0000000e+00 0.0000000e+00]]
+[3]
+127.0.0.1 - - [12/May/2020 11:12:17] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0.000000e+00 6.949328e-14 1.000000e+00 0.000000e+00 0.000000e+00
+  0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00]]
+[2]
+127.0.0.1 - - [12/May/2020 11:12:42] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+[0]
+127.0.0.1 - - [12/May/2020 11:13:12] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+[0]
+127.0.0.1 - - [12/May/2020 11:13:25] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[1.9945561e-16 0.0000000e+00 0.0000000e+00 1.0000000e+00 0.0000000e+00
+  1.0597702e-30 0.0000000e+00 0.0000000e+00 0.0000000e+00 0.0000000e+00]]
+[3]
+127.0.0.1 - - [12/May/2020 11:13:31] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0. 0. 0. 0. 0. 0. 1. 0. 0. 0.]]
+[6]
+127.0.0.1 - - [12/May/2020 11:13:41] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]]
+[1]
+127.0.0.1 - - [12/May/2020 11:13:46] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+[3]
+127.0.0.1 - - [12/May/2020 11:13:52] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+[3]
+127.0.0.1 - - [12/May/2020 11:14:01] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0.0000000e+00 0.0000000e+00 0.0000000e+00 2.0189925e-07 0.0000000e+00
+  0.0000000e+00 0.0000000e+00 0.0000000e+00 9.9999976e-01 0.0000000e+00]]
+[8]
+127.0.0.1 - - [12/May/2020 11:14:07] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0. 0. 0. 0. 0. 0. 1. 0. 0. 0.]]
+[6]
+127.0.0.1 - - [12/May/2020 11:14:11] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0.000000e+00 3.834167e-15 0.000000e+00 0.000000e+00 0.000000e+00
+  0.000000e+00 0.000000e+00 0.000000e+00 1.000000e+00 0.000000e+00]]
+[8]
+127.0.0.1 - - [12/May/2020 11:14:15] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+[3]
+127.0.0.1 - - [12/May/2020 11:14:21] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0.0000000e+00 9.9505973e-01 0.0000000e+00 3.2191552e-24 0.0000000e+00
+  5.6470395e-30 6.8729241e-05 0.0000000e+00 4.8716674e-03 6.3934068e-34]]
+[1]
+127.0.0.1 - - [12/May/2020 11:14:29] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[3.0803194e-17 0.0000000e+00 1.9109837e-21 1.0000000e+00 8.2144871e-31
+  5.9791468e-35 0.0000000e+00 5.0445913e-30 2.0095460e-33 0.0000000e+00]]
+[3]
+127.0.0.1 - - [12/May/2020 11:14:34] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 8.362421e-09
+  0.000000e+00 1.000000e+00 4.821654e-36 0.000000e+00 0.000000e+00]]
+[6]
+127.0.0.1 - - [12/May/2020 11:14:40] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 1.000000e+00
+  0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 9.917051e-20]]
+[4]
+127.0.0.1 - - [12/May/2020 11:14:44] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0. 0. 0. 0. 0. 0. 0. 0. 1. 0.]]
+[8]
+127.0.0.1 - - [12/May/2020 11:14:50] "POST /predict/ HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2020 11:15:13] "GET / HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0.0000000e+00 0.0000000e+00 0.0000000e+00 0.0000000e+00 2.3331554e-37
+  0.0000000e+00 1.0000000e+00 0.0000000e+00 4.7222231e-24 0.0000000e+00]]
+[6]
+127.0.0.1 - - [12/May/2020 11:15:16] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+[0]
+127.0.0.1 - - [12/May/2020 11:15:21] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]]
+[2]
+127.0.0.1 - - [12/May/2020 11:15:26] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0.0000000e+00 0.0000000e+00 0.0000000e+00 0.0000000e+00 0.0000000e+00
+  0.0000000e+00 1.0000000e+00 0.0000000e+00 1.3423784e-19 0.0000000e+00]]
+[6]
+127.0.0.1 - - [12/May/2020 11:15:31] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0. 0. 0. 0. 0. 0. 0. 0. 1. 0.]]
+[8]
+127.0.0.1 - - [12/May/2020 11:15:38] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0.         0.         0.         0.99434847 0.0056515  0.
+  0.         0.         0.         0.        ]]
+[3]
+127.0.0.1 - - [12/May/2020 11:15:44] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0.000000e+00 0.000000e+00 0.000000e+00 1.000000e+00 0.000000e+00
+  0.000000e+00 1.805624e-26 0.000000e+00 0.000000e+00 0.000000e+00]]
+[3]
+127.0.0.1 - - [12/May/2020 11:15:50] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0.000000e+00 0.000000e+00 0.000000e+00 6.171742e-29 0.000000e+00
+  0.000000e+00 0.000000e+00 0.000000e+00 1.000000e+00 0.000000e+00]]
+[8]
+127.0.0.1 - - [12/May/2020 11:15:54] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+[3]
+127.0.0.1 - - [12/May/2020 11:16:05] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]]
+[2]
+127.0.0.1 - - [12/May/2020 11:16:10] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0. 0. 0. 0. 0. 0. 0. 1. 0. 0.]]
+[7]
+127.0.0.1 - - [12/May/2020 11:16:16] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+[3]
+127.0.0.1 - - [12/May/2020 11:16:21] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+[3]
+127.0.0.1 - - [12/May/2020 11:16:26] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+[3]
+127.0.0.1 - - [12/May/2020 11:16:30] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+[3]
+127.0.0.1 - - [12/May/2020 11:23:03] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+[3]
+127.0.0.1 - - [12/May/2020 11:23:10] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]]
+[1]
+127.0.0.1 - - [12/May/2020 11:23:14] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0.000000e+00 1.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00
+  0.000000e+00 1.979645e-17 0.000000e+00 0.000000e+00 0.000000e+00]]
+[1]
+127.0.0.1 - - [12/May/2020 11:23:19] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0.000000e+00 1.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00
+  0.000000e+00 1.979645e-17 0.000000e+00 0.000000e+00 0.000000e+00]]
+[1]
+127.0.0.1 - - [12/May/2020 11:23:22] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0.000000e+00 1.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00
+  0.000000e+00 1.979645e-17 0.000000e+00 0.000000e+00 0.000000e+00]]
+[1]
+127.0.0.1 - - [12/May/2020 11:23:24] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0.0000000e+00 0.0000000e+00 0.0000000e+00 1.0000000e+00 0.0000000e+00
+  1.5745673e-28 0.0000000e+00 0.0000000e+00 2.8327546e-20 0.0000000e+00]]
+[3]
+127.0.0.1 - - [12/May/2020 11:23:30] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0.000000e+00 1.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00
+  0.000000e+00 0.000000e+00 0.000000e+00 5.174081e-37 0.000000e+00]]
+[1]
+127.0.0.1 - - [12/May/2020 11:23:36] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0.000000e+00 1.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00
+  0.000000e+00 0.000000e+00 0.000000e+00 5.174081e-37 0.000000e+00]]
+[1]
+127.0.0.1 - - [12/May/2020 11:23:40] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0.000000e+00 1.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00
+  0.000000e+00 0.000000e+00 0.000000e+00 5.174081e-37 0.000000e+00]]
+[1]
+127.0.0.1 - - [12/May/2020 11:23:41] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+[3]
+127.0.0.1 - - [12/May/2020 11:23:46] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]]
+[1]
+127.0.0.1 - - [12/May/2020 11:23:52] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]]
+[1]
+127.0.0.1 - - [12/May/2020 11:24:12] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0.         0.         0.01783056 0.98216945 0.         0.
+  0.         0.         0.         0.        ]]
+[3]
+127.0.0.1 - - [12/May/2020 11:24:17] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]]
+[2]
+127.0.0.1 - - [12/May/2020 11:24:22] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+[3]
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x0000029C4FA0C320>
+[[0. 0. 0. 0. 0. 0. 0. 1. 0. 0.]]
+[7]
+127.0.0.1 - - [12/May/2020 11:24:41] "POST /predict/ HTTP/1.1" 200 -
+(PythonData) PS C:\Users\Dave\DU-DEN-GITLAB\FinalProject\digits> python msinst_cnn.py
+x_train shape: (60000, 28, 28, 1)
+60000 train samples
+10000 test samples 
+2020-05-12 11:29:32.268110: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX
+Train on 60000 samples, validate on 10000 samples
+Epoch 1/30
+60000/60000 [==============================] - 213s 4ms/sample - loss: 2.2810 - accuracy: 0.1407 - val_loss: 2.2446 - val_accuracy: 0.3130
+Epoch 2/30
+60000/60000 [==============================] - 209s 3ms/sample - loss: 2.2203 - accuracy: 0.2555 - val_loss: 2.1684 - val_accuracy: 0.5147
+Epoch 3/30
+60000/60000 [==============================] - 216s 4ms/sample - loss: 2.1405 - accuracy: 0.3645 - val_loss: 2.0647 - val_accuracy: 0.6088
+Epoch 4/30
+60000/60000 [==============================] - 208s 3ms/sample - loss: 2.0311 - accuracy: 0.4504 - val_loss: 1.9244 - val_accuracy: 0.6712
+Epoch 5/30
+60000/60000 [==============================] - 207s 3ms/sample - loss: 1.8876 - accuracy: 0.5174 - val_loss: 1.7455 - val_accuracy: 0.7165
+Epoch 6/30
+60000/60000 [==============================] - 218s 4ms/sample - loss: 1.7214 - accuracy: 0.5631 - val_loss: 1.5388 - val_accuracy: 0.7518
+Epoch 7/30
+60000/60000 [==============================] - 210s 3ms/sample - loss: 1.5427 - accuracy: 0.6025 - val_loss: 1.3272 - val_accuracy: 0.7760
+Epoch 8/30
+60000/60000 [==============================] - 210s 4ms/sample - loss: 1.3787 - accuracy: 0.6289 - val_loss: 1.1389 - val_accuracy: 0.7978
+Epoch 9/30
+60000/60000 [==============================] - 215s 4ms/sample - loss: 1.2316 - accuracy: 0.6565 - val_loss: 0.9830 - val_accuracy: 0.8134
+Epoch 10/30
+60000/60000 [==============================] - 212s 4ms/sample - loss: 1.1134 - accuracy: 0.6821 - val_loss: 0.8617 - val_accuracy: 0.8231
+Epoch 11/30
+60000/60000 [==============================] - 211s 4ms/sample - loss: 1.0241 - accuracy: 0.6992 - val_loss: 0.7690 - val_accuracy: 0.8350
+Epoch 12/30
+60000/60000 [==============================] - 215s 4ms/sample - loss: 0.9552 - accuracy: 0.7164 - val_loss: 0.6989 - val_accuracy: 0.8431
+Epoch 13/30
+60000/60000 [==============================] - 209s 3ms/sample - loss: 0.8913 - accuracy: 0.7313 - val_loss: 0.6428 - val_accuracy: 0.8536
+Epoch 14/30
+60000/60000 [==============================] - 213s 4ms/sample - loss: 0.8442 - accuracy: 0.7438 - val_loss: 0.5985 - val_accuracy: 0.8576
+Epoch 15/30
+60000/60000 [==============================] - 210s 4ms/sample - loss: 0.8023 - accuracy: 0.7556 - val_loss: 0.5624 - val_accuracy: 0.8637
+Epoch 16/30
+60000/60000 [==============================] - 209s 3ms/sample - loss: 0.7702 - accuracy: 0.7653 - val_loss: 0.5329 - val_accuracy: 0.8684
+Epoch 17/30
+60000/60000 [==============================] - 216s 4ms/sample - loss: 0.7391 - accuracy: 0.7756 - val_loss: 0.5074 - val_accuracy: 0.8730
+Epoch 18/30
+60000/60000 [==============================] - 210s 3ms/sample - loss: 0.7141 - accuracy: 0.7824 - val_loss: 0.4866 - val_accuracy: 0.8766
+Epoch 19/30
+60000/60000 [==============================] - 213s 4ms/sample - loss: 0.6922 - accuracy: 0.7862 - val_loss: 0.4684 - val_accuracy: 0.8793
+Epoch 20/30
+60000/60000 [==============================] - 216s 4ms/sample - loss: 0.6693 - accuracy: 0.7940 - val_loss: 0.4521 - val_accuracy: 0.8826
+Epoch 21/30
+60000/60000 [==============================] - 208s 3ms/sample - loss: 0.6528 - accuracy: 0.7992 - val_loss: 0.4376 - val_accuracy: 0.8849
+Epoch 22/30
+60000/60000 [==============================] - 209s 3ms/sample - loss: 0.6359 - accuracy: 0.8043 - val_loss: 0.4253 - val_accuracy: 0.8863
+Epoch 23/30
+60000/60000 [==============================] - 216s 4ms/sample - loss: 0.6217 - accuracy: 0.8069 - val_loss: 0.4138 - val_accuracy: 0.8892
+Epoch 24/30
+60000/60000 [==============================] - 209s 3ms/sample - loss: 0.6085 - accuracy: 0.8146 - val_loss: 0.4036 - val_accuracy: 0.8907
+Epoch 25/30
+60000/60000 [==============================] - 211s 4ms/sample - loss: 0.5930 - accuracy: 0.8171 - val_loss: 0.3942 - val_accuracy: 0.8929
+Epoch 26/30
+60000/60000 [==============================] - 217s 4ms/sample - loss: 0.5815 - accuracy: 0.8213 - val_loss: 0.3860 - val_accuracy: 0.8942
+Epoch 27/30
+60000/60000 [==============================] - 212s 4ms/sample - loss: 0.5746 - accuracy: 0.8224 - val_loss: 0.3789 - val_accuracy: 0.8964
+Epoch 28/30
+_loss: 0.3712 - val_accuracy: 0.8978
+Epoch 29/30
+60000/60000 [==============================] - 244s 4ms/sample - loss: 0.5504 - accuracy: 0.8304 - val_loss: 0.3646 - val_accuracy: 0.8990
+Epoch 30/30
+60000/60000 [==============================] - 224s 4ms/sample - loss: 0.5394 - accuracy: 0.8342 - val_loss: 0.3578 - val_accuracy: 0.9004
+Test loss: 0.35781698976755144
+Test accuracy: 0.9004
+(PythonData) PS C:\Users\Dave\DU-DEN-GITLAB\FinalProject\digits> python app.py       
+2020-05-12 13:24:21.541393: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX
+Loaded Model from disk
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://localhost:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [12/May/2020 13:24:25] "GET / HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x000001C23F8DC320>
+[[0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+[3]
+127.0.0.1 - - [12/May/2020 13:24:38] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x000001C23F8DC320>
+[[0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]]
+[1]
+127.0.0.1 - - [12/May/2020 13:24:46] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x000001C23F8DC320>
+[[0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]]
+[1]
+127.0.0.1 - - [12/May/2020 13:24:53] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x000001C23F8DC320>
+[[0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+[3]
+127.0.0.1 - - [12/May/2020 13:25:03] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x000001C23F8DC320>
+[[0.000000e+00 0.000000e+00 8.268017e-18 0.000000e+00 0.000000e+00
+  0.000000e+00 1.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00]]
+[6]
+127.0.0.1 - - [12/May/2020 13:25:10] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x000001C23F8DC320>
+[[0.0000000e+00 0.0000000e+00 1.0000000e+00 0.0000000e+00 0.0000000e+00
+  0.0000000e+00 0.0000000e+00 0.0000000e+00 3.0190043e-30 0.0000000e+00]]
+[2]
+127.0.0.1 - - [12/May/2020 13:25:14] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x000001C23F8DC320>
+[[0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+[3]
+127.0.0.1 - - [12/May/2020 13:25:19] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x000001C23F8DC320>
+[[0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+[3]
+127.0.0.1 - - [12/May/2020 13:25:28] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x000001C23F8DC320>
+[[0. 0. 0. 0. 1. 0. 0. 0. 0. 0.]]
+[4]
+127.0.0.1 - - [12/May/2020 13:25:33] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x000001C23F8DC320>
+[[0. 0. 0. 0. 0. 0. 1. 0. 0. 0.]]
+[6]
+127.0.0.1 - - [12/May/2020 13:25:38] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x000001C23F8DC320>
+[[0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]]
+[2]
+127.0.0.1 - - [12/May/2020 13:25:44] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x000001C23F8DC320>
+[[0. 0. 0. 0. 0. 0. 0. 0. 1. 0.]]
+[8]
+127.0.0.1 - - [12/May/2020 13:25:48] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x000001C23F8DC320>
+[[0. 0. 0. 0. 0. 0. 0. 1. 0. 0.]]
+[7]
+127.0.0.1 - - [12/May/2020 13:25:53] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x000001C23F8DC320>
+[[0. 0. 0. 0. 0. 0. 0. 1. 0. 0.]]
+[7]
+127.0.0.1 - - [12/May/2020 13:25:59] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x000001C23F8DC320>
+[[0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]]
+[2]
+127.0.0.1 - - [12/May/2020 13:26:06] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x000001C23F8DC320>
+[[0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]]
+[2]
+127.0.0.1 - - [12/May/2020 13:26:17] "POST /predict/ HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2020 13:26:25] "GET / HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x000001C23F8DC320>
+[[0. 0. 0. 0. 0. 1. 0. 0. 0. 0.]]
+[5]
+127.0.0.1 - - [12/May/2020 13:26:30] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x000001C23F8DC320>
+[[0. 0. 0. 0. 0. 1. 0. 0. 0. 0.]]
+[5]
+127.0.0.1 - - [12/May/2020 13:26:34] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x000001C23F8DC320>
+[[0.00000e+00 0.00000e+00 0.00000e+00 0.00000e+00 0.00000e+00 4.07278e-18
+  0.00000e+00 0.00000e+00 1.00000e+00 0.00000e+00]]
+[8]
+127.0.0.1 - - [12/May/2020 13:26:38] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x000001C23F8DC320>
+[[0. 0. 0. 0. 0. 0. 0. 0. 1. 0.]]
+[8]
+127.0.0.1 - - [12/May/2020 13:26:45] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x000001C23F8DC320>
+[[0. 0. 0. 0. 0. 0. 0. 0. 1. 0.]]
+[8]
+127.0.0.1 - - [12/May/2020 13:26:47] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x000001C23F8DC320>
+[[0. 0. 0. 0. 0. 0. 1. 0. 0. 0.]]
+[6]
+127.0.0.1 - - [12/May/2020 13:26:53] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x000001C23F8DC320>
+[[0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+[3]
+127.0.0.1 - - [12/May/2020 13:27:00] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x000001C23F8DC320>
+[[0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00
+  0.000000e+00 1.000000e+00 0.000000e+00 4.797424e-26 0.000000e+00]]
+[6]
+127.0.0.1 - - [12/May/2020 13:27:06] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x000001C23F8DC320>
+[[0. 0. 0. 0. 0. 1. 0. 0. 0. 0.]]
+[5]
+127.0.0.1 - - [12/May/2020 13:27:13] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x000001C23F8DC320>
+[[0. 0. 0. 0. 0. 1. 0. 0. 0. 0.]]
+[5]
+127.0.0.1 - - [12/May/2020 13:27:19] "POST /predict/ HTTP/1.1" 200 -
+predict called
+predict called 2
+[[0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]]
+[2]
+predict called
+predict called 2
+model is <tensorflow.python.keras.engine.sequential.Sequential object at 0x000001C23F8DC320>
+[[0. 0. 0. 0. 0. 1. 0. 0. 0. 0.]]
+[5]
+127.0.0.1 - - [12/May/2020 13:27:33] "POST /predict/ HTTP/1.1" 200 -
+(PythonData) PS C:\Users\Dave\DU-DEN-GITLAB\FinalProject\digits> pip freeze > requirements.txt        
+WARNING: Could not generate requirement for distribution -cipy 1.3.2 (c:\anaconda3\envs\pythondata\lib\site-packages): Parse error at "'-cipy==1'": Expected W:(abcd...)
+(PythonData) PS C:\Users\Dave\DU-DEN-GITLAB\FinalProject\digits> python msinst_cnn.py                 
+x_train shape: (60000, 28, 28, 1)
+60000 train samples
+10000 test samples
+2020-05-12 22:29:34.770977: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX
+Train on 60000 samples, validate on 10000 samples
+Epoch 1/100
+60000/60000 [==============================] - 209s 3ms/sample - loss: 2.2973 - accuracy: 0.1113 - val_loss: 2.2811 - val_accuracy: 0.1824
+Epoch 2/100
+60000/60000 [==============================] - 209s 3ms/sample - loss: 2.2807 - accuracy: 0.1439 - val_loss: 2.2601 - val_accuracy: 0.3057
+Epoch 3/100
+60000/60000 [==============================] - 220s 4ms/sample - loss: 2.2633 - accuracy: 0.1724 - val_loss: 2.2359 - val_accuracy: 0.3891
+Epoch 4/100
+60000/60000 [==============================] - 209s 3ms/sample - loss: 2.2414 - accuracy: 0.1962 - val_loss: 2.2059 - val_accuracy: 0.4310
+Epoch 5/100
+60000/60000 [==============================] - 207s 3ms/sample - loss: 2.2148 - accuracy: 0.2201 - val_loss: 2.1691 - val_accuracy: 0.4707
+Epoch 6/100
+60000/60000 [==============================] - 213s 4ms/sample - loss: 2.1837 - accuracy: 0.2436 - val_loss: 2.1247 - val_accuracy: 0.5200
+Epoch 7/100
+60000/60000 [==============================] - 206s 3ms/sample - loss: 2.1501 - accuracy: 0.2624 - val_loss: 2.0738 - val_accuracy: 0.5675
+Epoch 8/100
+60000/60000 [==============================] - 207s 3ms/sample - loss: 2.1076 - accuracy: 0.2856 - val_loss: 2.0146 - val_accuracy: 0.6089
+Epoch 9/100
+60000/60000 [==============================] - 215s 4ms/sample - loss: 2.0654 - accuracy: 0.3070 - val_loss: 1.9484 - val_accuracy: 0.6454
+Epoch 10/100
+60000/60000 [==============================] - 206s 3ms/sample - loss: 2.0154 - accuracy: 0.3307 - val_loss: 1.8746 - val_accuracy: 0.6733
+Epoch 11/100
+60000/60000 [==============================] - 206s 3ms/sample - loss: 1.9630 - accuracy: 0.3557 - val_loss: 1.7963 - val_accuracy: 0.6999
+Epoch 12/100
+60000/60000 [==============================] - 219s 4ms/sample - loss: 1.9046 - accuracy: 0.3800 - val_loss: 1.7122 - val_accuracy: 0.7229
+Epoch 13/100
+60000/60000 [==============================] - 209s 3ms/sample - loss: 1.8455 - accuracy: 0.4036 - val_loss: 1.6265 - val_accuracy: 0.7426
+Epoch 14/100
+60000/60000 [==============================] - 213s 4ms/sample - loss: 1.7909 - accuracy: 0.4193 - val_loss: 1.5406 - val_accuracy: 0.7569
+Epoch 15/100
+60000/60000 [==============================] - 212s 4ms/sample - loss: 1.7317 - accuracy: 0.4425 - val_loss: 1.4566 - val_accuracy: 0.7725
+Epoch 16/100
+60000/60000 [==============================] - 207s 3ms/sample - loss: 1.6734 - accuracy: 0.4623 - val_loss: 1.3741 - val_accuracy: 0.7847
+Epoch 17/100
+60000/60000 [==============================] - 211s 4ms/sample - loss: 1.6244 - accuracy: 0.4759 - val_loss: 1.2972 - val_accuracy: 0.7961
+Epoch 18/100
+60000/60000 [==============================] - 221s 4ms/sample - loss: 1.5726 - accuracy: 0.4943 - val_loss: 1.2220 - val_accuracy: 0.8042
+Epoch 19/100
+60000/60000 [==============================] - 207s 3ms/sample - loss: 1.5229 - accuracy: 0.5096 - val_loss: 1.1540 - val_accuracy: 0.8122
+Epoch 20/100
+60000/60000 [==============================] - 215s 4ms/sample - loss: 1.4759 - accuracy: 0.5238 - val_loss: 1.0909 - val_accuracy: 0.8181
+Epoch 21/100
+60000/60000 [==============================] - 211s 4ms/sample - loss: 1.4324 - accuracy: 0.5387 - val_loss: 1.0326 - val_accuracy: 0.8241
+Epoch 22/100
+60000/60000 [==============================] - 208s 3ms/sample - loss: 1.3842 - accuracy: 0.5540 - val_loss: 0.9751 - val_accuracy: 0.8333
+Epoch 23/100
+60000/60000 [==============================] - 214s 4ms/sample - loss: 1.3478 - accuracy: 0.5638 - val_loss: 0.9254 - val_accuracy: 0.8387
+Epoch 24/100
+60000/60000 [==============================] - 207s 3ms/sample - loss: 1.3108 - accuracy: 0.5734 - val_loss: 0.8811 - val_accuracy: 0.8433
+Epoch 25/100
+60000/60000 [==============================] - 207s 3ms/sample - loss: 1.2762 - accuracy: 0.5865 - val_loss: 0.8390 - val_accuracy: 0.8507
+Epoch 26/100
+60000/60000 [==============================] - 216s 4ms/sample - loss: 1.2483 - accuracy: 0.5974 - val_loss: 0.8023 - val_accuracy: 0.8538
+Epoch 27/100
+60000/60000 [==============================] - 207s 3ms/sample - loss: 1.2157 - accuracy: 0.6040 - val_loss: 0.7668 - val_accuracy: 0.8559
+Epoch 28/100
+60000/60000 [==============================] - 207s 3ms/sample - loss: 1.1812 - accuracy: 0.6165 - val_loss: 0.7349 - val_accuracy: 0.8596
+Epoch 29/100
+60000/60000 [==============================] - 217s 4ms/sample - loss: 1.1578 - accuracy: 0.6248 - val_loss: 0.7064 - val_accuracy: 0.8623
+Epoch 30/100
+60000/60000 [==============================] - 210s 4ms/sample - loss: 1.1331 - accuracy: 0.6328 - val_loss: 0.6806 - val_accuracy: 0.8646
+Epoch 31/100
+60000/60000 [==============================] - 207s 3ms/sample - loss: 1.1025 - accuracy: 0.6407 - val_loss: 0.6548 - val_accuracy: 0.8678
+Epoch 32/100
+60000/60000 [==============================] - 213s 4ms/sample - loss: 1.0795 - accuracy: 0.6500 - val_loss: 0.6328 - val_accuracy: 0.8705
+Epoch 33/100
+60000/60000 [==============================] - 207s 3ms/sample - loss: 1.0612 - accuracy: 0.6552 - val_loss: 0.6137 - val_accuracy: 0.8723
+Epoch 34/100
+60000/60000 [==============================] - 208s 3ms/sample - loss: 1.0441 - accuracy: 0.6629 - val_loss: 0.5954 - val_accuracy: 0.8757
+Epoch 35/100
+60000/60000 [==============================] - 214s 4ms/sample - loss: 1.0224 - accuracy: 0.6689 - val_loss: 0.5775 - val_accuracy: 0.8763
+Epoch 36/100
+60000/60000 [==============================] - 206s 3ms/sample - loss: 1.0014 - accuracy: 0.6759 - val_loss: 0.5615 - val_accuracy: 0.8774
+Epoch 37/100
+60000/60000 [==============================] - 212s 4ms/sample - loss: 0.9854 - accuracy: 0.6801 - val_loss: 0.5468 - val_accuracy: 0.8787
+Epoch 38/100
+60000/60000 [==============================] - 211s 4ms/sample - loss: 0.9725 - accuracy: 0.6850 - val_loss: 0.5334 - val_accuracy: 0.8810
+Epoch 39/100
+60000/60000 [==============================] - 209s 3ms/sample - loss: 0.9581 - accuracy: 0.6892 - val_loss: 0.5205 - val_accuracy: 0.8825
+Epoch 40/100
+60000/60000 [==============================] - 213s 4ms/sample - loss: 0.9490 - accuracy: 0.6938 - val_loss: 0.5089 - val_accuracy: 0.8840
+Epoch 41/100
+60000/60000 [==============================] - 206s 3ms/sample - loss: 0.9280 - accuracy: 0.7013 - val_loss: 0.4975 - val_accuracy: 0.8851
+Epoch 42/100
+60000/60000 [==============================] - 207s 3ms/sample - loss: 0.9179 - accuracy: 0.7032 - val_loss: 0.4870 - val_accuracy: 0.8865
+Epoch 43/100
+60000/60000 [==============================] - 217s 4ms/sample - loss: 0.9020 - accuracy: 0.7095 - val_loss: 0.4764 - val_accuracy: 0.8873
+Epoch 44/100
+60000/60000 [==============================] - 207s 3ms/sample - loss: 0.8869 - accuracy: 0.7121 - val_loss: 0.4663 - val_accuracy: 0.8885
+Epoch 45/100
+60000/60000 [==============================] - 206s 3ms/sample - loss: 0.8815 - accuracy: 0.7154 - val_loss: 0.4584 - val_accuracy: 0.8897
+Epoch 46/100
+60000/60000 [==============================] - 216s 4ms/sample - loss: 0.8682 - accuracy: 0.7210 - val_loss: 0.4506 - val_accuracy: 0.8907
+Epoch 47/100
+60000/60000 [==============================] - 208s 3ms/sample - loss: 0.8596 - accuracy: 0.7228 - val_loss: 0.4437 - val_accuracy: 0.8915
+Epoch 48/100
+60000/60000 [==============================] - 210s 3ms/sample - loss: 0.8415 - accuracy: 0.7282 - val_loss: 0.4354 - val_accuracy: 0.8931
+Epoch 49/100
+60000/60000 [==============================] - 213s 4ms/sample - loss: 0.8322 - accuracy: 0.7325 - val_loss: 0.4281 - val_accuracy: 0.8929
+Epoch 50/100
+60000/60000 [==============================] - 207s 3ms/sample - loss: 0.8282 - accuracy: 0.7333 - val_loss: 0.4212 - val_accuracy: 0.8942
+Epoch 51/100
+60000/60000 [==============================] - 207s 3ms/sample - loss: 0.8124 - accuracy: 0.7420 - val_loss: 0.4155 - val_accuracy: 0.8951
+Epoch 52/100
+60000/60000 [==============================] - 215s 4ms/sample - loss: 0.8105 - accuracy: 0.7400 - val_loss: 0.4095 - val_accuracy: 0.8962
+Epoch 53/100
+60000/60000 [==============================] - 207s 3ms/sample - loss: 0.8024 - accuracy: 0.7446 - val_loss: 0.4039 - val_accuracy: 0.8967
+Epoch 54/100
+60000/60000 [==============================] - 208s 3ms/sample - loss: 0.7923 - accuracy: 0.7482 - val_loss: 0.3987 - val_accuracy: 0.8977
+Epoch 55/100
+60000/60000 [==============================] - 223s 4ms/sample - loss: 0.7817 - accuracy: 0.7501 - val_loss: 0.3937 - val_accuracy: 0.8979
+Epoch 56/100
+60000/60000 [==============================] - 208s 3ms/sample - loss: 0.7805 - accuracy: 0.7517 - val_loss: 0.3894 - val_accuracy: 0.8999
+Epoch 57/100
+60000/60000 [==============================] - 216s 4ms/sample - loss: 0.7723 - accuracy: 0.7562 - val_loss: 0.3850 - val_accuracy: 0.9013
+Epoch 58/100
+60000/60000 [==============================] - 207s 3ms/sample - loss: 0.7659 - accuracy: 0.7565 - val_loss: 0.3808 - val_accuracy: 0.9022
+Epoch 59/100
+60000/60000 [==============================] - 206s 3ms/sample - loss: 0.7536 - accuracy: 0.7601 - val_loss: 0.3759 - val_accuracy: 0.9024
+Epoch 60/100
+60000/60000 [==============================] - 215s 4ms/sample - loss: 0.7471 - accuracy: 0.7616 - val_loss: 0.3727 - val_accuracy: 0.9034
+Epoch 61/100
+60000/60000 [==============================] - 206s 3ms/sample - loss: 0.7387 - accuracy: 0.7646 - val_loss: 0.3680 - val_accuracy: 0.9036
+Epoch 62/100
+60000/60000 [==============================] - 206s 3ms/sample - loss: 0.7399 - accuracy: 0.7643 - val_loss: 0.3643 - val_accuracy: 0.9052
+Epoch 63/100
+60000/60000 [==============================] - 215s 4ms/sample - loss: 0.7313 - accuracy: 0.7679 - val_loss: 0.3601 - val_accuracy: 0.9054
+Epoch 64/100
+60000/60000 [==============================] - 208s 3ms/sample - loss: 0.7267 - accuracy: 0.7703 - val_loss: 0.3559 - val_accuracy: 0.9060
+Epoch 65/100
+60000/60000 [==============================] - 208s 3ms/sample - loss: 0.7226 - accuracy: 0.7726 - val_loss: 0.3530 - val_accuracy: 0.9060
+Epoch 66/100
+60000/60000 [==============================] - 216s 4ms/sample - loss: 0.7135 - accuracy: 0.7758 - val_loss: 0.3504 - val_accuracy: 0.9069
+Epoch 67/100
+60000/60000 [==============================] - 207s 3ms/sample - loss: 0.7095 - accuracy: 0.7763 - val_loss: 0.3474 - val_accuracy: 0.9071
+Epoch 68/100
+60000/60000 [==============================] - 207s 3ms/sample - loss: 0.7013 - accuracy: 0.7790 - val_loss: 0.3437 - val_accuracy: 0.9073
+Epoch 69/100
+60000/60000 [==============================] - 215s 4ms/sample - loss: 0.6990 - accuracy: 0.7802 - val_loss: 0.3412 - val_accuracy: 0.9079
+Epoch 70/100
+60000/60000 [==============================] - 206s 3ms/sample - loss: 0.6919 - accuracy: 0.7823 - val_loss: 0.3380 - val_accuracy: 0.9083
+Epoch 71/100
+60000/60000 [==============================] - 207s 3ms/sample - loss: 0.6864 - accuracy: 0.7833 - val_loss: 0.3355 - val_accuracy: 0.9084
+Epoch 72/100
+60000/60000 [==============================] - 218s 4ms/sample - loss: 0.6904 - accuracy: 0.7811 - val_loss: 0.3335 - val_accuracy: 0.9090
+Epoch 73/100
+60000/60000 [==============================] - 207s 3ms/sample - loss: 0.6792 - accuracy: 0.7843 - val_loss: 0.3307 - val_accuracy: 0.9093
+Epoch 74/100
+60000/60000 [==============================] - 210s 3ms/sample - loss: 0.6717 - accuracy: 0.7890 - val_loss: 0.3278 - val_accuracy: 0.9099
+Epoch 75/100
+60000/60000 [==============================] - 212s 4ms/sample - loss: 0.6732 - accuracy: 0.7882 - val_loss: 0.3252 - val_accuracy: 0.9112
+Epoch 76/100
+60000/60000 [==============================] - 207s 3ms/sample - loss: 0.6664 - accuracy: 0.7945 - val_loss: 0.3240 - val_accuracy: 0.9108
+Epoch 77/100
+60000/60000 [==============================] - 214s 4ms/sample - loss: 0.6612 - accuracy: 0.7933 - val_loss: 0.3214 - val_accuracy: 0.9108
+Epoch 78/100
+60000/60000 [==============================] - 208s 3ms/sample - loss: 0.6618 - accuracy: 0.7931 - val_loss: 0.3194 - val_accuracy: 0.9120
+Epoch 79/100
+60000/60000 [==============================] - 206s 3ms/sample - loss: 0.6611 - accuracy: 0.7933 - val_loss: 0.3178 - val_accuracy: 0.9121
+Epoch 80/100
+60000/60000 [==============================] - 216s 4ms/sample - loss: 0.6497 - accuracy: 0.7975 - val_loss: 0.3152 - val_accuracy: 0.9131
+Epoch 81/100
+60000/60000 [==============================] - 208s 3ms/sample - loss: 0.6470 - accuracy: 0.7988 - val_loss: 0.3135 - val_accuracy: 0.9136
+Epoch 82/100
+60000/60000 [==============================] - 206s 3ms/sample - loss: 0.6468 - accuracy: 0.8000 - val_loss: 0.3120 - val_accuracy: 0.9138
+Epoch 83/100
+60000/60000 [==============================] - 216s 4ms/sample - loss: 0.6466 - accuracy: 0.7999 - val_loss: 0.3108 - val_accuracy: 0.9145
+Epoch 84/100
+60000/60000 [==============================] - 208s 3ms/sample - loss: 0.6394 - accuracy: 0.8014 - val_loss: 0.3083 - val_accuracy: 0.9145
+Epoch 85/100
+60000/60000 [==============================] - 207s 3ms/sample - loss: 0.6321 - accuracy: 0.8027 - val_loss: 0.3069 - val_accuracy: 0.9143
+Epoch 86/100
+60000/60000 [==============================] - 216s 4ms/sample - loss: 0.6308 - accuracy: 0.8037 - val_loss: 0.3045 - val_accuracy: 0.9153
+Epoch 87/100
+60000/60000 [==============================] - 207s 3ms/sample - loss: 0.6325 - accuracy: 0.8013 - val_loss: 0.3026 - val_accuracy: 0.9160
+Epoch 88/100
+60000/60000 [==============================] - 207s 3ms/sample - loss: 0.6238 - accuracy: 0.8079 - val_loss: 0.3012 - val_accuracy: 0.9162
+Epoch 89/100
+60000/60000 [==============================] - 220s 4ms/sample - loss: 0.6216 - accuracy: 0.8083 - val_loss: 0.2990 - val_accuracy: 0.9161
+Epoch 90/100
+60000/60000 [==============================] - 213s 4ms/sample - loss: 0.6105 - accuracy: 0.8101 - val_loss: 0.2969 - val_accuracy: 0.9161
+Epoch 91/100
+60000/60000 [==============================] - 210s 3ms/sample - loss: 0.6120 - accuracy: 0.8106 - val_loss: 0.2955 - val_accuracy: 0.9165
+Epoch 92/100
+60000/60000 [==============================] - 216s 4ms/sample - loss: 0.6083 - accuracy: 0.8111 - val_loss: 0.2944 - val_accuracy: 0.9166
+Epoch 93/100
+60000/60000 [==============================] - 208s 3ms/sample - loss: 0.6041 - accuracy: 0.8145 - val_loss: 0.2923 - val_accuracy: 0.9170
+Epoch 94/100
+60000/60000 [==============================] - 214s 4ms/sample - loss: 0.6030 - accuracy: 0.8137 - val_loss: 0.2909 - val_accuracy: 0.9172
+Epoch 95/100
+60000/60000 [==============================] - 211s 4ms/sample - loss: 0.6057 - accuracy: 0.8120 - val_loss: 0.2903 - val_accuracy: 0.9179
+Epoch 96/100
+60000/60000 [==============================] - 208s 3ms/sample - loss: 0.5983 - accuracy: 0.8159 - val_loss: 0.2882 - val_accuracy: 0.9181
+Epoch 97/100
+60000/60000 [==============================] - 217s 4ms/sample - loss: 0.5962 - accuracy: 0.8160 - val_loss: 0.2869 - val_accuracy: 0.9179
+Epoch 98/100
+60000/60000 [==============================] - 209s 3ms/sample - loss: 0.5925 - accuracy: 0.8181 - val_loss: 0.2858 - val_accuracy: 0.9184
+Epoch 99/100
+60000/60000 [==============================] - 208s 3ms/sample - loss: 0.5932 - accuracy: 0.8169 - val_loss: 0.2847 - val_accuracy: 0.9190
+Epoch 100/100
+60000/60000 [==============================] - 216s 4ms/sample - loss: 0.5895 - accuracy: 0.8189 - val_loss: 0.2836 - val_accuracy: 0.9193
+Test loss: 0.2835760692000389
+Test accuracy: 0.9193
+(PythonData) PS C:\Users\Dave\DU-DEN-GITLAB\FinalProject\digits> 
